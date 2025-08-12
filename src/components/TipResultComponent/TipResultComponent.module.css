@@ -1,0 +1,37 @@
+.tipResult {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.tipLabel {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0px;
+}
+
+.tipLabelSpan {
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  color: #7f9d9f;
+  margin-top: 6px;
+}
+
+.tipAmount {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 100%;
+  letter-spacing: -1px;
+  text-align: right;
+  color: #26C2AE;
+}
+
+@media (max-width: 600px) {
+  .tipAmount {
+    font-size: 32px;
+  }
+}

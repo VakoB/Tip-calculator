@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+.card {
+  background-color: white;
+  margin: 0 auto;
+  width: 70%;
+  max-width: 920px;
+  display: flex;
+  font-family: Space Mono;
+  gap: 48px;
+  padding: 32px;
+  border-radius: 25px;
+}
+
+.tipText {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  color: #5e7a7d;
+}
+
+.tipButtonContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 14px;
+  margin-top: 16px;
+}
+
+.customTipInputWrapper {
+  background-color: #f3f9fa;
+  padding-inline: 15px;
+  display: flex;
+  align-items: center;
+  border-radius: 2px;
+}
+
+.customTipInput {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  text-align: right;
+  color: #547878;
+  width: 100%;
+}
+
+.customTipInputWrapper:focus-within {
+  border: 2px solid #26c2ae;
+}
+
+.inputSection {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.outputSection {
+  width: 100%;
+  background-color: #00474b;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  gap: 32px;
+  border-radius: 15px;
+}
+
+.resetButton {
+  width: 100%;
+  border-radius: 5px;
+  background-color: #26c2ae;
+  border: none;
+  color: #00474b;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  text-align: center;
+  padding-block: 14px;
+  display: flex;
+  justify-content: center;
+  margin-top: auto;
+  transition: background-color 0.2s;
+}
+
+.resetButton:hover {
+  cursor: pointer;
+  background-color: #9fe8df;
+}
+
+.resetButtonDisabled {
+  background-color: #0d686d;
+  fill-opacity: 0.35;
+}
+
+.resetButtonDisabled:hover {
+  cursor: default;
+  background-color: #0d686d;
+}
+
+@media (max-width: 1024px) {
+  .card {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .tipButtonContainer {
+    grid-template-columns: 1fr 1fr;
+  }
+}

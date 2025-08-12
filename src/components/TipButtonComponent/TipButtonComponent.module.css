@@ -1,0 +1,35 @@
+.tipButtonText {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  text-align: center;
+  transition: color 0.2s;
+}
+
+.tipButton {
+  background-color: #00474B;
+  color: white;
+  border-radius: 5px;
+  min-height: 48px;
+  align-content: center;
+  transition: background-color 0.2s;
+}
+
+.tipButton:hover {
+  cursor: pointer;
+  background-color: #9FE8DF;
+}
+
+.tipButton:hover .tipButtonText {
+  color: #00474B;
+}
+
+
+.selectedButton {
+  background-color: #26C2AE !important;
+}
+
+.selectedButton .tipButtonText {
+  color: #00474B !important;
+}
