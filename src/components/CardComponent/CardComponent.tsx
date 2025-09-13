@@ -14,7 +14,7 @@ export default function CardComponent() {
   const [error, setError] = useState<string | null>(null);
   const customInputRef = useRef<HTMLInputElement>(null);
 
-  const IseveryTipComponentFilled = bill && numberOfPeople && activeNumber;
+  const IseveryTipComponentFilled = bill !== null && numberOfPeople !== null && activeNumber !== null;
   const tipAmount = IseveryTipComponentFilled ? bill * (activeNumber / 100) : 0;
   const totalAmount = IseveryTipComponentFilled ? tipAmount + bill : 0;
 
@@ -46,8 +46,6 @@ export default function CardComponent() {
       setNumberOfPeople(null);
     } else if (Number(inputValue) === 0) {
       setError("Can’t be zero");
-    } else {
-      setNumberOfPeople(Number(inputValue));
     }
   };
 
@@ -62,6 +60,14 @@ export default function CardComponent() {
       setBill(null);
     } else {
       setBill(Number(inputValue));
+    }
+  };
+
+  const tipButtonOnclick = (num: number) => {
+    if (num === activeNumber) {
+      setActiveNumber(null);
+    } else { 
+      setActiveNumber(num);
     }
   };
 
@@ -83,11 +89,7 @@ export default function CardComponent() {
               <TipButtonComponent
                 key={idx}
                 onClick={() => {
-                  if (num === activeNumber) {
-                    setActiveNumber(null);
-                  } else {
-                    setActiveNumber(num);
-                  }
+                  tipButtonOnclick(num);
                 }}
                 number={num}
                 activeNumber={activeNumber}

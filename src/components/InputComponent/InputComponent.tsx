@@ -11,12 +11,14 @@ export default function InputComponent(props: InputProps) {
         {props.error ? <p className={styles.errorText}>{props.error}</p> : null}
       </div>
 
-      <div className={`${styles.inputContainer} ${props.error ? styles.inputError : ""}`}>
+      <div
+        className={`${styles.inputContainer} ${
+          props.error ? styles.inputError : ""
+        }`}
+      >
         <img src={props.icon} alt="input icon" />
         <input
-          onChange={(e) => {
-            props.onChangeHandler(e);
-          }}
+          onChange={props.onChangeHandler}
           value={props.state !== null ? props.state : ""}
           className={styles.input}
           id={props.label}
